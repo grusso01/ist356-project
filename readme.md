@@ -1,75 +1,53 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/VeqDR4Il)
-# IST356 Project
+NYC Recycling Capture Rate Dashboard
 
-## Project Expectations
+Overview
+The NYC Recycling Capture Rate Dashboard is an interactive web application that visualizes recycling performance across New York City boroughs. Users can select a borough from a dropdown menu to explore trends in average recycling capture rates over time, with the option to view the data in detailed tables.
 
-For the project you can do anything you want, provided it uses what we learned in the course. Here's a summary of what's expected:
+Motivation
+This project was created to analyze and communicate NYC’s recycling efficiency by borough. It enables users to understand historical trends, identify areas for improvement, and make data-driven insights about municipal recycling performance.
 
-1. Python functions in modules with tests
+Key Features
+	•	Interactive Borough Selection: Choose any NYC borough to view recycling trends over time.
+	•	Data Visualization: Line charts displaying average recycling capture rates by year.
+	•	Data Tables: View detailed yearly metrics including average capture rate.
+	•	Cleaned & Processed Data: Raw municipal datasets transformed into accurate, analyzable metrics.
 
-2. Streamlit for user interface
+Tech Stack
+	•	Python
+	•	Streamlit for interactive web app
+	•	Pandas for data cleaning, transformation, and aggregation
+	•	CSV files for data storage
 
-3. Pandas for data manipulation
+Data Pipeline
+	1.	Load raw DSNY monthly tonnage data (monthly_tonnage_raw.csv).
+	2.	Clean and filter relevant columns for analysis.
+	3.	Compute recycling metrics: recyclable tons collected, total waste tons, and capture rate.
+	4.	Aggregate data by borough and year to produce average capture rates.
+	5.	Save cleaned and summarized data to CSV for dashboard use.
 
-4. Visualizations (seaborn, geopandas, folium, plotly express)
+Usage
+	1.	Clone the repository:
 
-5. APIs (cent.ischool-iot.net portal or any other API's of your choosing) and/or  
-Web Scraping using playwright if you cannot find an API.
+git clone <repo-url>
 
-Your grade is proportional to the number of expectations you complete with intentionality.
+	2.	Install dependencies:
 
-## What Type of Project Should I Do?
+pip install pandas streamlit
 
-Its up to you! Do you need some ideas? Consider building a data pipeline like we did in assignment 04/05/06 and then building a dashboard around the data using visualizations and streamlit.
+	3.	Run the dashboard locally:
 
-Break your pipeline up into separate python programs to perform each step similar to assignment 05 and 06.
-
-
-1. Extract data from API's / web scraping / or a dataset. Save the data to a file in your cache folder.
-
-2. Transform the data into a format that is useful for your dashboard. Save the data to a file in your cache folder.
-
-3. Load the data into a pandas and interact with it using streamlit and charts, graphs or maps.
-
-4. part of your extract or transform steps you might need to write functions. Make sure you write tests for these functions, similar to what has been demonstrated in the class assignments.
-
-
-## I need more inspiration...
-
-Here's a place where you can find API's that might interest you:
-
-- Awesome Public API's: https://github.com/public-apis/public-apis
-- US Government API's: https://api.data.gov/
-- Portal of Public APIs: https://publicapis.dev/
-- Always welcome to use: https://cent.ischool-iot.net/
+streamlit run app.py
 
 
-Here's a suggestion for data sources / datasets of interest:
+Challenges & Learnings
+	•	Managed real-world municipal datasets with missing and inconsistent data.
+	•	Built a complete data pipeline from raw CSVs to an interactive dashboard.
+	•	Computed domain-specific sustainability metrics (recycling capture rate) and visualized trends for multiple NYC boroughs.
 
-- SU Library: https://researchguides.library.syr.edu/az/databases?t=8828
-- Data Catalog: https://data.world/datasets/free
-- Most cities have an open data portal, for example: https://opendata.cityofnewyork.us/
-- British Film Institute: https://www.bfi.org.uk/industry-data-insights
-- NASA Data, for example: https://www.earthdata.nasa.gov/
-- Sports Data: https://www.sports-reference.com/
-- US Government data: https://data.gov/
-- Google Dataset Search: https://datasetsearch.research.google.com/
-- Kaggle Datasets: https://www.kaggle.com/datasets
-- Awesome Public Datasets: https://github.com/smuthubabu/awesome-public-datasets
+Next Steps / Future Improvements
+	•	Add more interactive visualizations (e.g., year-over-year comparisons).
+	•	Include predictive analytics for future recycling capture rates.
+	•	Deploy online via Streamlit Sharing or Heroku for public access.
 
-
-## What am I turning in?
-
-Push your github repository to the github classroom assignment. When you are done. You can push multiple times, but the last push before the deadline is what will be graded.
-
-- Complete your project in the `code` folder and have your tests in the `tests` folder. Any files you save should be in the `cache` folder.
-- There is no graderbot here, so complete the `about-project.md` to explain what your project does and how I should run it. It's okay if I need to run a couple of Python programs.
-- Complete your `reflection.md` to reflect on what you learned, what you struggled with, and what you might do if you had more time with the project.
-
-## In summary
-
-It is important to me that I see "YOU" in your project. That means:
-
-- Share what you learned,
-- Do something that interests you,
-- Explain what you did and how it works!
+About the App:
+The NYC Recycling Capture Rate Dashboard is an interactive tool that tracks recycling efficiency across NYC boroughs. Built with Python and Streamlit, it allows users to explore historical trends, view data tables, and gain actionable insights into municipal recycling performance. The project demonstrates end-to-end data skills: cleaning raw datasets, computing key sustainability metrics, and presenting them in a professional, user-friendly dashboard.
